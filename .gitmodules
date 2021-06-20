@@ -1,3 +1,6 @@
 [submodule "pico-sdk"]
 	path = pico-sdk
 	url = https://github.com/raspberrypi/pico-sdk
+[submodule "SparkFun_Micro_OLED_Arduino_Library"]
+	path = SparkFun_Micro_OLED_Arduino_Library
+	url = https://github.com/jparkerh/SparkFun_Micro_OLED_Arduino_Library
