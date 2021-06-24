@@ -20,6 +20,9 @@ add_executable(i2c_read_write_oled
     ${src_files}
 )
 
+pico_enable_stdio_usb(i2c_read_write_oled 1)
+pico_enable_stdio_uart(i2c_read_write_oled 0)
+
 target_link_libraries(i2c_read_write_oled
     SparkFun_Micro_OLED_Arduino_Library
 )
