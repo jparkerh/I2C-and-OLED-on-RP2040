@@ -1,6 +1,6 @@
 # RP2040, I2C, and a (very) Tiny OLED
 
-![image](https://user-images.githubusercontent.com/42722137/123342316-23684e80-d515-11eb-864c-4277b6f537ec.png)
+![IMG_6335](https://user-images.githubusercontent.com/42722137/123551479-8cc7a780-d737-11eb-85d0-97891ae3b8f2.gif)
 
 ### Project Overview
 
