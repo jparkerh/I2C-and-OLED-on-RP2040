@@ -13,6 +13,7 @@ pico_sdk_init()
 
 add_subdirectory(TwoWire)
 add_subdirectory(SparkFun_Micro_OLED_Arduino_Library)
+add_subdirectory(ScrollingTextBox)
 
 AUX_SOURCE_DIRECTORY(./src src_files)
 
@@ -24,7 +25,7 @@ pico_enable_stdio_usb(i2c_read_write_oled 1)
 pico_enable_stdio_uart(i2c_read_write_oled 0)
 
 target_link_libraries(i2c_read_write_oled
-    SparkFun_Micro_OLED_Arduino_Library
+    ScrollingTextBox
 )
 
 # create map/bin/hex/uf2 file in addition to ELF.

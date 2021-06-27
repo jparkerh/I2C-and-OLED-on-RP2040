@@ -1,27 +1,25 @@
-#include "SFE_MicroOLED.h"
+#include "ScrollingTextBox.h"
 #include <stdio.h>
 #include "pico/stdlib.h"
+
+void testWrappingInt (ScrollingTextBox &term) {
+
+    for (int i = 0; i<256; i++){
+        term.writeNewLine(std::to_string(i));
+    }
+}
 
 int main () {
 
     stdio_init_all();
-    sleep_ms(5000);
+    sleep_ms(2000);
 
-    MicroOLED oled(9, 1); //Example I2C declaration
-    oled.begin();
-    oled.clear(0);
-    printf("After init and clear\n");
+    ScrollingTextBox term;
 
-    oled.display();
-
-    int MIDDLE_X = oled.getLCDWidth() / 2; // Find the centre of the display
-    int MIDDLE_Y = oled.getLCDHeight() / 2;
-
-    oled.circle(MIDDLE_X, MIDDLE_Y, 20);
-    oled.display();
-
-    printf("After display\n");
-
+    // quick testbench, shows the wrap around of the gdram buffer
+    testWrappingInt(term);
+    
+    // busy exit, keeps USB peripheral up
     while (1) {}
 
     return 0;
